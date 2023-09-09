@@ -4,7 +4,7 @@ from pyspark.sql.functions import countDistinct, collect_list, sum
 
 # Create a SparkSession
 def merge(user_df,transaction_df):
-    total_df = user_df.join(transaction_df, user_df.userid == transaction_df.userid)
+    total_df = user_df.join(transaction_df, user_df.user_id == transaction_df.userid)
     return total_df
 def UniqueLocation(total_df):
     # a): Count of unique locations where each product is sold
