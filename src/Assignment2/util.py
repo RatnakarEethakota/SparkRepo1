@@ -5,7 +5,7 @@ import logging
 import sys
 
 def spark_session():
-    spark = SparkSession.builder.appName("Assignment2").getOrCreate()
+    spark =SparkSession.builder.appName("Assignment2").getOrCreate()
     return spark
 
 def creating_rdd(spark,filepath):
